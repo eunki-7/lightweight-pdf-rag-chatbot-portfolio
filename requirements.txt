@@ -1,0 +1,7 @@
+gradio==3.40.1
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+PyMuPDF
+huggingface_hub
