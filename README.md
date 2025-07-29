@@ -30,6 +30,21 @@ If no relevant content is found in the uploaded PDF, it automatically **falls ba
 
 ---
 
+## Scalable AWS Deployment Architecture
+If deployed on AWS, the architecture could be designed as follows:
+
+- **API Gateway** handles all external client requests.
+- **AWS Lambda** orchestrates:
+  - Voice-to-Text using Amazon Transcribe or Whisper
+  - Text-to-SQL or RAG inference via SageMaker Endpoints (FLAN-T5, MiniLM)
+- **Amazon OpenSearch or Amazon RDS** handles document retrieval or SQL execution.
+- **Amazon S3** stores PDF documents and audio files.
+- **Amazon CloudWatch** monitors all components.
+
+![AWS Unified Architecture](docs/aws_architecture.png)
+
+---
+
 ## Live Demo
 [**👉 Try it on Hugging Face Spaces**](https://huggingface.co/spaces/eunki-7/Lightweight-PDF-RAG-Chatbot)
 
