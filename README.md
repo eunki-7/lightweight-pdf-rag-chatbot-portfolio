@@ -45,6 +45,15 @@ If deployed on AWS, the architecture could be designed as follows:
 
 ---
 
+## Production Considerations
+Even though this is a free-tier prototype, the following practices are considered for production:
+- **Security**: IAM roles with least privilege, data encryption at rest and in transit
+- **Scalability**: Serverless (Lambda), containerized deployment, caching strategies
+- **Monitoring**: CloudWatch metrics and logging, automated alarms
+- **CI/CD**: GitHub Actions workflow for testing and automated deployment
+
+---
+
 ## Live Demo
 [**👉 Try it on Hugging Face Spaces**](https://huggingface.co/spaces/eunki-7/Lightweight-PDF-RAG-Chatbot)
 
